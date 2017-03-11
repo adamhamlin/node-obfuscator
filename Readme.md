@@ -1,13 +1,11 @@
 
-# maintainer wanted
+# Fork changes:
 
-if you want this package, open an issue or email me
+Changed UglifyJS dependency to their Harmony branch which supports ES2015/ES6.
 
-<br><br><br><br><br><br><br><br><br><br>
+<br><br><br
 
 # Obfuscator
-
-[![Build Status](https://travis-ci.org/stephenmathieson/node-obfuscator.png?branch=master)](https://travis-ci.org/stephenmathieson/node-obfuscator) [![Dependency Status](https://gemnasium.com/stephenmathieson/node-obfuscator.png)](https://gemnasium.com/stephenmathieson/node-obfuscator)
 
 Obfuscate your node packages because your boss says so!
 
