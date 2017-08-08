@@ -5,7 +5,7 @@ var read = require('fs').readFileSync,
     path = require('path'),
     obfuscator = require('..'),
     utils = obfuscator.utils,
-    uglifyjs = require('uglify-js'),
+    uglifyjs = require('uglify-es'),
     assert = require('better-assert');
 
 var FIXTURES = path.join(__dirname, '..', 'examples');
@@ -351,71 +351,6 @@ describe('obfuscator', function () {
           js.match(/var/g).length.should.be.equal(2);
           done();
         });
-      });
-
-      it('should have default options', function () {
-        utils.compress.defaults.should.be.an.object;
-        utils.compress.defaults.join_vars.should.be.true;
-      });
-    });
-
-    describe('.ast()', function () {
-      var bad = 'blah blah blah',
-          good = 'var hello = "hello"';
-
-      it('should not throw given unparseable js', function (done) {
-        utils.ast(bad, function () {
-          done();
-        });
-      });
-
-      it('should pass an Error given unparseable js', function (done) {
-        utils.ast(bad, function (err) {
-          assert(err instanceof Error);
-          done();
-        });
-      });
-
-      it('should keep JS_Parse_Error properties', function (done) {
-        utils.ast(bad, function (err) {
-          assert(err.line);
-          assert(err.col);
-          assert(err.message);
-          done();
-        });
-      });
-
-      it('should provide a walkable AST given parseable js', function (done) {
-        utils.ast(good, function (err, ast) {
-          assert(ast.walk);
-
-          function walker() {
-            if (walker.done) {
-              return;
-            }
-            walker.done = true;
-            done();
-          }
-
-          ast.walk(new uglifyjs.TreeWalker(walker));
-        });
-      });
-    });
-
-    describe('.hex()', function () {
-      it('should encode strings to their hex representations', function () {
-        utils.hex('foo').should.be.equal('\\x66\\x6f\\x6f');
-        utils.hex('bar').should.be.equal('\\x62\\x61\\x72');
-        utils.hex('baz').should.be.equal('\\x62\\x61\\x7a');
-        utils.hex('qaz').should.be.equal('\\x71\\x61\\x7a');
-        utils.hex('dat').should.be.equal('\\x64\\x61\\x74');
-        utils.hex('\b').should.be.equal('\\b');
-        utils.hex('\f').should.be.equal('\\f');
-        utils.hex('\n').should.be.equal('\\n');
-        utils.hex('\r').should.be.equal('\\r');
-        utils.hex('\t').should.be.equal('\\t');
-        utils.hex('\\').should.be.equal('\\\\');
-        utils.hex('\\\t').should.be.equal('\\\\\\t');
       });
     });
   });

@@ -1,6 +1,6 @@
 {
-  "name": "obfuscator",
-  "version": "0.5.4",
+  "name": "obfuscator-es",
+  "version": "0.5.6",
   "scripts": {
     "test": "make all"
   },
@@ -11,13 +11,19 @@
     "uglify"
   ],
   "author": "Stephen Mathieson <me@stephenmathieson.com>",
+  "contributors": [
+    {
+      "name": "Ilija Boshkov",
+      "email": "ilija.boshkov@gmail.com"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/stephenmathieson/node-obfuscator.git"
+    "url": "git://github.com/iboshkov/node-obfuscator.git"
   },
   "dependencies": {
-    "uglify-js": "git+https://github.com/mishoo/UglifyJS2.git#harmony",
-    "commander": "~2.0.0"
+    "commander": "~2.0.0",
+    "uglify-es": "^3.0.27"
   },
   "devDependencies": {
     "better-assert": "~1.0.0",
@@ -32,9 +38,9 @@
   },
   "main": "index.js",
   "bugs": {
-    "url": "https://github.com/stephenmathieson/node-obfuscator/issues"
+    "url": "https://github.com/iboshkov/node-obfuscator/issues"
   },
-  "homepage": "https://github.com/stephenmathieson/node-obfuscator",
+  "homepage": "https://github.com/iboshkov/node-obfuscator",
   "directories": {
     "example": "examples",
     "test": "test"

@@ -3,7 +3,11 @@
 
 Changed UglifyJS dependency to their Harmony branch which supports ES2015/ES6.
 
-<br><br><br
+The readme below is old and may not work in this version.
+
+Currently strings are not mangled and some tests are failing.
+
+<br><br><br>
 
 # Obfuscator
 
