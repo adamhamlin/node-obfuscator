@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "commander": "~2.0.0",
-    "uglify-es": "^3.0.27"
+    "uglify-es": "npm:terser"
   },
   "devDependencies": {
     "better-assert": "~1.0.0",
