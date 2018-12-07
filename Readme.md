@@ -1,7 +1,7 @@
 
 # Fork changes:
 
-Changed UglifyJS dependency to their Harmony branch which supports ES2015/ES6.
+Changed UglifyJS dependency to ~~their Harmony branch~~ terser which supports ES2015/ES6.
 
 The readme below is old and may not work in this version.
 
