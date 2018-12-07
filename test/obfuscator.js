@@ -5,7 +5,6 @@ var read = require('fs').readFileSync,
     path = require('path'),
     obfuscator = require('..'),
     utils = obfuscator.utils,
-    uglifyjs = require('uglify-es'),
     assert = require('better-assert');
 
 var FIXTURES = path.join(__dirname, '..', 'examples');
