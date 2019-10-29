@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "commander": "~2.0.0",
-    "terser": "terser-js/terser"
+    "terser": "~4.3.9"
   },
   "devDependencies": {
     "better-assert": "~1.0.0",
